@@ -1,0 +1,9 @@
+.container {
+	padding-inline: 40px;
+	margin-inline: auto;
+	max-width: 1520px;
+
+	@include media($mobile-bp) {
+		padding-inline: 20px;
+	}
+}

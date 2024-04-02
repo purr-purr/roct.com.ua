@@ -1,0 +1,54 @@
+.container {
+	display: block;
+	width: fit-content;
+	font-size: 16px;
+	font-weight: 600;
+	border-radius: 30px;
+	border: 1px solid var(--primary);
+	background-color: var(--white);
+	color: var(--primary);
+	padding: 20px 58px 20px 24px;
+	position: relative;
+	transition: all .4s ease-in-out;
+
+	&:after {
+		content: '';
+		position: absolute;
+		right: -4px;
+		bottom: -6px;
+		width: 100%;
+		height: 100%;
+		background-color: var(--primary);
+		border-radius: 30px;
+		z-index: -1;
+		transition: all .4s ease-in-out;
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: calc((100% - 24px) / 2);
+		right: 20px;
+		width: 24px;
+		height: 24px;
+		background: url("../../assets/heart-icon-yellow.svg") no-repeat center center;
+		transition: background .2s linear;
+	}
+
+	&:hover {
+		border-color: var(--blue);
+		color: var(--blue);
+		transition: all .4s ease-in-out;
+
+		&:after {
+			background-color: var(--blue);
+			right: 0;
+			bottom: 0;
+		}
+
+		&:before {
+			background-image: url("../../assets/heart-icon-blue.svg");
+			transition: background .2s linear;
+		}
+	}
+}

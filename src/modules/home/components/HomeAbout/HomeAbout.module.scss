@@ -1,0 +1,62 @@
+.container {
+	padding-block: 274px 250px;
+	padding-inline: 40px;
+	background: url('../../assets/blur.svg') no-repeat center center;
+
+	@include media($mobile-bp) {
+		background-size: 100%;
+		padding-inline: 30px;
+		padding-block: 160px 150px;
+	}
+}
+
+.description {
+	margin-inline: auto;
+	max-width: 952px;
+	font-size: 32px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: var(--light-gray);
+	text-indent: 74px;
+	position: relative;
+
+	@include media($mobile-bp) {
+		font-size: 18px;
+	}
+
+	strong {
+		color: var(--dark);
+	}
+
+	&:after, &:before {
+		content: '';
+		position: absolute;
+		width: 33px;
+		height: 25px;
+		background: url('../../assets/quote.svg') no-repeat center / 100%;
+
+		@include media($mobile-bp) {
+			width: 24px;
+			height: 18px;
+		}
+	}
+
+	&:after {
+		bottom: -5px;
+		right: -45px;
+		transform: rotate(180deg);
+
+		@include media($mobile-bp) {
+			right: -30px;
+		}
+	}
+
+	&:before {
+		top: -5px;
+		left: -45px;
+
+		@include media($mobile-bp) {
+			left: -30px;
+		}
+	}
+}

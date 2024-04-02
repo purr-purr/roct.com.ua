@@ -1,0 +1,49 @@
+.container {
+	@include flex($align: center, $gap: 28px);
+	padding-top: 60px;
+	background: url('../../assets/blur-2.svg') no-repeat top left;
+
+	@include media($mobile-bp) {
+		flex-direction: column;
+		align-items: baseline;
+		background-size: 100%;
+	}
+}
+
+.title {
+	font-size: 32px;
+	font-weight: 600;
+	margin-bottom: 40px;
+	text-transform: uppercase;
+
+	@include media($mobile-bp) {
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+
+	span {
+		color: var(--primary);
+	}
+}
+
+.description {
+	max-width: 593px;
+	font-size: 20px;
+	margin-bottom: 48px;
+}
+
+.poster {
+	max-width: 708px;
+	width: 100%;
+
+	@include media($mobile-bp) {
+		margin-top: 60px;
+		max-width: 550px;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}

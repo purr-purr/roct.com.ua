@@ -1,0 +1,33 @@
+.container {
+	padding-block: 38px 24px;
+	@include flex(center, space-between, 24px);
+
+	@include media($mobile-bp) {
+		padding-block: 24px 16px;
+	}
+}
+
+.socials {
+	@include flex($align: center, $gap: 60px);
+	list-style-type: none;
+
+	@include media($mobile-bp) {
+		gap: 30px;
+	}
+
+	&Box {
+		width: 24px;
+		height: 24px;
+	}
+
+	&Link {
+		display: block;
+		height: 24px;
+		transition: opacity 0.3s ease-in-out;
+
+		&:hover {
+			opacity: 0.7;
+			transition: opacity 0.3s ease-in-out;
+		}
+	}
+}
