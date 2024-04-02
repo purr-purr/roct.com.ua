@@ -23,7 +23,7 @@ const HomeSupport = () => {
 			</article>
 
 			<article className={cn(s.card, s.support)} id="support">
-				<h2 className={s.title}>Підтримати сьогодні
+				<h2 className={s.title}>Підтримати
 					<Image src={HEARTS_ICON} alt="Hearts Icon"/>
 				</h2>
 				<p><b>БЛАГОДІЙНА ОРГАНІЗАЦІЯ «БЛАГОДІЙНИЙ ФОНД

@@ -1,7 +1,9 @@
 .container {
 	@include flex($align: center, $gap: 28px);
 	padding-top: 60px;
-	background: url('../../assets/blur-2.svg') no-repeat top left;
+	background: url('../../assets/blur-2.svg') no-repeat;
+	background-position-x: left;
+	background-position-y: top;
 
 	@include media($mobile-bp) {
 		flex-direction: column;
